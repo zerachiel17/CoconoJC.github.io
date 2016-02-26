@@ -18,30 +18,20 @@
     var near = 1;
     var far = 1000;
     var camara = new THREE.PerspectiveCamera(fov, aspect, near, far);
-    
     camara.position.z = 500;
-    
     var renderer = new THREE.WebGLRenderer();
     renderer.setSize(window.innerWidth, window.innerHeight);
     document.body.appendChild(renderer.domElement);
     
-    var figura =new THREE.Shape();
-    //
-    figura.moveTo(10, 10);
-    figura.lineTo(20, 10);
-    figura.lineTo(20, 30);
-    figura.lineTo(50, 30);
-    figura.lineTo(50, 10);
-    figura.lineTo(60, 10);
-    figura.lineTo(60, 60);
-    figura.lineTo(50, 60);
-    figura.lineTo(50, 40);
-    figura.lineTo(20, 40);
-    figura.lineTo(20, 60);
-    figura.lineTo(10, 60);
-    figura.lineTo(10, 10);
+    //La figura se establece sobre el plano zx
+    var puntos = [];
+    for (var i = 0; i < 50; i++ ) {
+      puntos.push( new THREE.Vector2(   //Se insertan los puntos al arreglo
+        Math.sin( i * 0.2 ) * 15 + 50,  //Eje x
+        (i - 5) * 2 ) );                //Eje z
+    }
     
-    var forma = new THREE.ExtrudeGeometry(figura, {amount: 100});
+    var forma = new THREE.LatheGeometry( puntos);   //La revolucion se realiza sobre el eje y
     var malla = new THREE.Mesh(forma);
     
     escena.add(malla);
