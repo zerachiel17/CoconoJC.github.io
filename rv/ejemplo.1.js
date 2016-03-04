@@ -40,8 +40,8 @@ function loop() {
   if ( Math.abs(piernaD.rotation.z) > .5 )
     step = -step;
     
-  piernaD.rotation.z += 0.01 step;
-  piernaI.rotation.z -= 0.01 step;
+  piernaD.rotation.z += step;
+  piernaI.rotation.z -= step;
 }
 var escena, camara, renderer;
 var step, piernaD, piernaI;
