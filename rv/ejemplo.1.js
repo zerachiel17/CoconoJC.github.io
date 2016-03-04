@@ -19,7 +19,7 @@ function setup() {
   piernaD = new Pierna();
   piernaI = new Pierna();
   cuerpo.position.y = 2;
-  piernaD.position.z = -1;
+  piernaD.position.z = -10;
   piernaI.position.z = 1;
   step = .01;
   escena = new THREE.Scene();
