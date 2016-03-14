@@ -57,13 +57,13 @@ function setup(){
  cilindro9.position.x=9.5;
  cilindro9.position.y=1.5;
  
- var ruedaForma1=new THREE.CylinderGeometry(mul*2, mul*2, mul*1);
+ var ruedaForma1=new THREE.CylinderGeometry(mul*2, mul*2, mul*1, 25);
  var rueda1 = new THREE.Mesh(ruedaForma1);
  rueda1.rotateX(1.57);
  rueda1.position.x=2;
  rueda1.position.y=2;
  
- var ruedaForma2=new THREE.CylinderGeometry(mul*1.5, mul*1.5, mul*1);
+ var ruedaForma2=new THREE.CylinderGeometry(mul*1.5, mul*1.5, mul*1, 25);
  var rueda2 = new THREE.Mesh(ruedaForma2);
  rueda2.rotateX(1.57);
  rueda2.position.x=9.5;
