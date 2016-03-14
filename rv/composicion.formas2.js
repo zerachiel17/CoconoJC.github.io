@@ -12,6 +12,7 @@ function setup(){
  // se desplazan las mallas
  cilindro1.position.x=2;
  cilindro1.position.z=2;
+ cilindro1.rotateZ(1.57);
  
  // Se genera una forma  (geometrica) abstracta
  var forma=new THREE.Geometry();
