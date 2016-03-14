@@ -1,7 +1,7 @@
 function setup(){
  
  // Se plantean las geometrias a utilizar
- dia = 0.2;
+ dia = 0.1;
  mul=1;
  var cilindroForma1=new THREE.CylinderGeometry(dia, dia, mul*2);
  
