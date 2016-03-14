@@ -39,6 +39,12 @@ function setup(){
  cilindro6.position.x=2;
  cilindro6.position.y=7;
  
+ var cilindroForma7=new THREE.CylinderGeometry(dia, dia, mul*4);
+ var cilindro7 = new THREE.Mesh(cilindroForma7);
+ cilindro7.rotateZ(1.57);
+ cilindro7.position.x=4;
+ cilindro7.position.y=5;
+ 
  // Se genera una forma  (geometrica) abstracta
  var forma=new THREE.Geometry();
  
@@ -49,6 +55,7 @@ function setup(){
  THREE.GeometryUtils.merge(forma, cilindro4);
  THREE.GeometryUtils.merge(forma, cilindro5);
  THREE.GeometryUtils.merge(forma, cilindro6);
+ THREE.GeometryUtils.merge(forma, cilindro7);
  
  // Se genera la malla a partir de la forma
  malla=new THREE.Mesh(forma);
