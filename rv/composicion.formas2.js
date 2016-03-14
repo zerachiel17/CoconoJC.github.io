@@ -6,18 +6,18 @@ function setup(){
  
  var cilindroForma1=new THREE.CylinderGeometry(dia, dia, mul*2);
  var cilindro1 = new THREE.Mesh(cilindroForma1);
- cilindro1.position.x=2;
- cilindro1.position.y=2;
  cilindro1.rotateX(1.57);
+ //cilindro1.position.x=2;
+ //cilindro1.position.y=2;
  
  var cilindroForma2=new THREE.CylinderGeometry(dia, dia, mul*3);
  var cilindro2 = new THREE.Mesh(cilindroForma2);
- cilindro2.position.x=2;
+ //cilindro2.position.x=3.5;
  cilindro2.position.z=-1;
  
  var cilindroForma3=new THREE.CylinderGeometry(dia, dia, mul*3);
  var cilindro3 = new THREE.Mesh(cilindroForma3);
- cilindro3.position.x=2;
+ //cilindro3.position.x=-3.5;
  cilindro3.position.z=1;
  
  // Se genera una forma  (geometrica) abstracta
