@@ -8,7 +8,7 @@ function setup(){
  var cilindro1 = new THREE.Mesh(cilindroForma1);
  cilindro1.position.x=2;
  cilindro1.position.y=2;
- cilindro1.rotateY(1.57);
+ cilindro1.rotateX(1.57);
  
  var cilindroForma2=new THREE.CylinderGeometry(dia, dia, mul*3);
  var cilindro2 = new THREE.Mesh(cilindroForma2);
