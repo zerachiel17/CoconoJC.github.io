@@ -12,12 +12,12 @@ function setup(){
  
  var cilindroForma2=new THREE.CylinderGeometry(dia, dia, mul*3);
  var cilindro2 = new THREE.Mesh(cilindroForma2);
- cilindro2.position.x=3.5;
+ cilindro2.position.x=2;
  cilindro2.position.z=-1;
  
  var cilindroForma3=new THREE.CylinderGeometry(dia, dia, mul*3);
  var cilindro3 = new THREE.Mesh(cilindroForma3);
- cilindro3.position.x=3.5;
+ cilindro3.position.x=2;
  cilindro3.position.z=1;
  
  // Se genera una forma  (geometrica) abstracta
@@ -43,7 +43,7 @@ function setup(){
 function loop(){
 requestAnimationFrame(loop);
 //malla.rotation.x+=0.01;
-//malla.rotation.y+=0.01;
+malla.rotation.y+=0.001;
 renderer.render(escena,camara);
 }
 
