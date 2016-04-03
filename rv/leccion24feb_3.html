@@ -18,9 +18,9 @@ canvas{width:100%; height:100%;}
   var near=0.1;
   var far=1000;
   var camara=new THREE.PerspectiveCamera(fov,aspect,near,far);
-  camara.position.z=75;
-  camara.position.x=0;
-  camara.position.y=0;
+  camara.position.z=200;
+  camara.position.x=1;
+  camara.position.y=1;
   
   var renderer=new THREE.WebGLRenderer();
   renderer.setSize(window.innerWidth,window.innerHeight);
@@ -28,19 +28,12 @@ canvas{width:100%; height:100%;}
 </script>
 
 <script>
-var figura= new THREE.Shape();
-figura.moveTo(10,10);
-figura.lineTo(10,40);
-figura.lineTo(40,40);
-figura.lineTo(10,10);
-var forma=new THREE.ShapeGeometry(figura);
-var malla=new THREE.Mesh(forma);
-escena.add(malla);
+var forma=new THREE.TorusGeometry(10,3,16,100);
+var material=new THREE.MeshNormalMaterial();
+var toro=new THREE.Mesh(forma,material);
+escena.add(toro);
 function render(){
   requestAnimationFrame(render);
-  
-  //malla.rotation.x += 0.1;
-  //malla.rotation.y += 0.1;
   
   renderer.render(escena,camara);
   
