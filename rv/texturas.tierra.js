@@ -28,5 +28,3 @@ renderer.render(escena,camara);
 var malla,camara,escena,renderer;
 setup();
 loop();
-Status API Training Shop Blog About
-© 2016 GitHub, Inc. Terms Privacy Security Contact 
