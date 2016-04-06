@@ -20,7 +20,7 @@ function loop() {
   if (intersects.length > 0) step = -step;
   cubo1.rotation.z += step;
   //cubo1.rotation.y += step;
-  //cubo2.rotation.z += step;
+  cubo2.rotation.z += step;
   //cubo2.rotation.y += step;
   renderer.render(escena,camara);
   requestAnimationFrame(loop);
