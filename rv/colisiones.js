@@ -6,7 +6,7 @@ function setup() {
   camara = new THREE.PerspectiveCamera();
   camara.position.z = 5;
   raycaster = new THREE.Raycaster();
-  raycaster.setFromCamera(new THREE.Vector2(.5,.5),camara);
+  raycaster.setFromCamera(new THREE.Vector2(.9,.9),camara);
   escena = new THREE.Scene();
   escena.add( cubo1, cubo2, camara);
   renderer = new THREE.WebGLRenderer();
