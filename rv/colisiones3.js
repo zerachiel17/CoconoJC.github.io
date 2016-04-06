@@ -6,7 +6,7 @@ function setup() {
   camara = new THREE.PerspectiveCamera();
   camara.position.z = 5;
   raycaster = new THREE.Raycaster();
-  raycaster.setFromCamera(new THREE.Vector2(0.5, 0),camara);
+  raycaster.setFromCamera(new THREE.Vector2(0.2, 0),camara);
   escena = new THREE.Scene();
   escena.add( cubo1, cubo2, camara);
   renderer = new THREE.WebGLRenderer();
@@ -16,7 +16,7 @@ function setup() {
 }
 
 function loop() {
-  var intersects=raycaster.intersectObjects(escena.children);
+  var intersects = raycaster.intersectObjects(escena.children);
   if (intersects.length > 0) step = -step;
   cubo1.rotation.z += step;
   //cubo1.rotation.y += step;
