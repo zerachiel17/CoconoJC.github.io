@@ -113,5 +113,5 @@ renderer.render(escena,camara);
 }
 
 var escena,camara,renderer,malla,wireframe,dia,mul;
-setup();
+setup()
 loop();
